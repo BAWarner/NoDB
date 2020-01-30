@@ -1,0 +1,307 @@
+[
+    {
+        "id": 0,
+        "type": "movie",
+        "title": "Wayne's World",
+        "poster": "https://www.gstatic.com/tv/thumb/v22vodart/13779/p13779_v_v8_al.jpg",
+        "releaseYear": 1992,
+        "director": "Penelope Spheeris",
+        "genre": "Music/Comedy",
+        "runtime": 95,
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 1,
+        "type": "movie",
+        "title": "Blade Runner",
+        "poster": "https://www.gstatic.com/tv/thumb/v22vodart/4190/p4190_v_v8_ak.jpg",
+        "releaseYear": 1982,
+        "director": "Ridley Scott",
+        "genre": "Fantasy/Sci-Fi",
+        "runtime": 164,
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 2,
+        "type": "movie",
+        "title": "Blade Runner 2049",
+        "poster": "https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/88314/91406/Blade-Runner-2049-Final-Style-Poster-buy-original-movie-posters-at-starstills__83407.1519904794.jpg?c=2?imbypass=on",
+        "releaseYear": 2017,
+        "director": "Denis Villeneuve",
+        "genre": "Fantasy/Mystery",
+        "runtime": 117,
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 3,
+        "type": "movie",
+        "title": "Baby Driver",
+        "poster": "https://www.digitalartsonline.co.uk/cmsdata/slideshow/3662115/baby-driver-rory-hi-res.jpg",
+        "releaseYear": 2017,
+        "director": "Edgar Wright",
+        "genre": "Drama/Crime",
+        "runtime": 113,
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 4,
+        "type": "movie",
+        "title": "Logan",
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/91WgnhSHyzL._AC_SL1500_.jpg",
+        "releaseYear": 2017,
+        "director": "James Mangold",
+        "genre": "Drama/Sci-Fi",
+        "runtime": 141,
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 5,
+        "type": "movie",
+        "title": "The Shining",
+        "poster": "https://alternativemovieposters.com/wp-content/uploads/2019/08/dario_shining.jpg",
+        "releaseYear": 1980,
+        "director": "Stanley Kubrick",
+        "genre": "Mystery/Psychological Horror",
+        "runtime": 146,
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 6,
+        "type": "movie",
+        "title": "The Blues Brothers",
+        "poster": "https://ae01.alicdn.com/kf/HTB1KRhLIpXXXXaYXVXXq6xXFXXXu.jpg",
+        "releaseYear": 1980,
+        "director": "John Landis",
+        "genre": "Comedy/Action",
+        "runtime": 148,
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 7,
+        "type": "series",
+        "title": "Chuck",
+        "poster": "https://img.moviepostershop.com/chuck-tv-movie-poster-2007-1020504384.jpg",
+        "releaseYear": 2007,
+        "network": "NBC",
+        "seasons": 5,
+        "genre": "Action",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 8,
+        "type": "series",
+        "title": "Stranger Things",
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/71vJ3kPE67L._AC_SY679_.jpg",
+        "releaseYear": 2016,
+        "network": "Netflix",
+        "seasons": 3,
+        "genre": "Horror",
+        "checkedOut": true,
+        "checkedTo": {
+            "person": "Garth Algar",
+            "dateCheckedOut": "6/4/2000"
+        }
+    },
+    {
+        "id": 9,
+        "type": "series",
+        "title": "Sherlock",
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/61LpsoQHT1L._SY679_.jpg",
+        "releaseYear": 2010,
+        "network": "BBC",
+        "seasons": 4,
+        "genre": "Crime/Drama",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 10,
+        "type": "series",
+        "title": "It's Always Sunny In Philadelphia",
+        "poster": "https://www.gstatic.com/tv/thumb/tvbanners/17083224/p17083224_b_v8_aa.jpg",
+        "releaseYear": 2005,
+        "network": "FX",
+        "seasons": 14,
+        "genre": "Comedy",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 11,
+        "type": "book",
+        "title": "The Great Divorce",
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/51HLX79pJ6L._SX330_BO1,204,203,200_.jpg",
+        "releaseYear": 1945,
+        "author": "C.S. Lewis",
+        "genre": "Speculative Fiction",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 12,
+        "type": "book",
+        "title": "Harry Potter and The Goblet of Fire",
+        "poster": "https://img.bookfrom.net/img/1707050849/1298_harry_potter_and_the_goblet_of_fire.jpg",
+        "releaseYear": 2000,
+        "author": "J.K. Rowling",
+        "genre": "Fantasy",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 13,
+        "type": "book",
+        "title": "The Things They Carried",
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/41e-BQAL1oL._SX329_BO1,204,203,200_.jpg",
+        "releaseYear": 1990,
+        "author": "Tim O'Brien",
+        "genre": "Historical Fiction",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 14,
+        "type": "book",
+        "title": "Ten Little Indians",
+        "poster": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1391120695l/16299.jpg",
+        "releaseYear": 1975,
+        "author": "Agatha Christie",
+        "genre": "Mystery Thriller/Suspense",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 15,
+        "type": "book",
+        "title": "Murder on the Orient Express",
+        "poster": "https://cdn.shopify.com/s/files/1/0962/4180/products/JohnnyDombrowski_Murderontheorientexpress_1000r_1024x1024.jpg?v=1488656237",
+        "releaseYear": 1934,
+        "author": "Agatha Christie",
+        "genre": "Mystery/Crime Fiction",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 16,
+        "type": "cd",
+        "title": "Nevermind",
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/71DQrKpImPL._SY355_.jpg",
+        "releaseYear": 1991,
+        "artist": "Nirvana",
+        "genre": "Rock",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 17,
+        "type": "cd",
+        "title": "The Dark Side of the Moon",
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/61R7gJadP7L._SX466_.jpg",
+        "releaseYear": 1973,
+        "artist": "Pink Floyd",
+        "genre": "Rock",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 18,
+        "type": "cd",
+        "title": "Back in Black",
+        "poster": "https://images-na.ssl-images-amazon.com/images/I/51QBqqMxyoL._SY400_.jpg",
+        "releaseYear": 1980,
+        "artist": "AC/DC",
+        "genre": "Rock",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    },
+    {
+        "id": 19,
+        "type": "cd",
+        "title": "Hurry Up, We're Dreaming",
+        "poster": "https://lh5.googleusercontent.com/proxy/gCUeDacVa8zo64FBQEYIxSYDbHc1EG3tMIZBK5J-FFdOvu5hwzM1qLUBOV7SMYBE1RFZVJyiAmwlHV6xsm8fiv4xG1frwKrHfxoI7YogQ5qZMLBmpVs",
+        "releaseYear": 2011,
+        "artist": "M83",
+        "genre": "Synth-pop/Shoegazing",
+        "checkedOut": true,
+        "checkedTo": {
+            "person": "Wayne Campbell",
+            "dateCheckedOut": "1/19/2020"
+        }
+    },
+    {
+        "id": 20,
+        "type": "cd",
+        "title": "American Teen",
+        "poster": "https://images.contentstack.io/v3/assets/blt1b60905dd65bfb9b/blt80a8566858006ad6/5b0661d2ff49f05073ace12b/khalid-american-teen-album-cover.jpg",
+        "releaseYear": 2017,
+        "artist": "Khalid",
+        "genre": "Contemporary R&B",
+        "checkedOut": false,
+        "checkedTo": {
+            "person": "",
+            "dateCheckedOut": ""
+        }
+    }
+]
