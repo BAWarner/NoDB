@@ -15,10 +15,12 @@ class Collection extends Component{
             }
         );
         return(
-            <div>
-                <h1>My Media Collection</h1>
-                {mapMe}
-            </div>
+            <main>
+                <h1 className="text-center mrg-btm-65">My Media Collection</h1>
+                <div className="collection-wrap flex justify-center flex-wrap">
+                    {mapMe}
+                </div>
+            </main>
         );
     }
 

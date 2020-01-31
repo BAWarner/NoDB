@@ -1,0 +1,93 @@
+.collection-wrap{
+    max-width: 1775px;
+    margin: 0 auto;
+}
+
+.single{
+    width: 46%;
+
+    img{
+        width: 95%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    form{
+        img{
+            @extend .poster-preview;
+            display: inline-block;
+        }
+    }
+
+    @media screen and (min-width:816px){
+        width: 30%;
+
+        img,
+        .buttons-row{
+            width: 250px;
+        }
+    }
+
+    line-height: 25px;
+    position: relative;
+
+    &:nth-child(n+4){
+        margin-top: 50px;
+    }
+
+    .checked{
+        
+        cursor: pointer;
+
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000000;
+        border-radius: 100%;
+        line-height: initial;
+
+        span{
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: -16px;
+            font-size: 35px;
+        }
+    }
+
+    .buttons-row{
+        -webkit-user-select: none; /* Chrome/Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+        /* Rules below not implemented in browsers yet */
+        -o-user-select: none;
+        user-select: none;
+        padding-bottom: 10px;
+
+        max-width: 95%;
+        margin: 0 auto;
+
+        .editing-media{
+            position: absolute;
+            top: 45%;
+            font-size: 54px;
+            transform: rotate(-55deg) translateY(-245%);
+            color: #CE2929;
+            text-transform: uppercase;
+            letter-spacing: 15.3px;
+            left: 100px;
+            right: 0;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+    }
+
+    h2{
+        margin: 0;
+    }
+
+}

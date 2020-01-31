@@ -1,0 +1,78 @@
+.form-wrap{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    text-align: left;
+
+    form{
+        max-width: 75%;
+        padding: 75px;
+        position: relative;
+        margin: 65px auto 0;
+        background-color: #ffffff;
+
+        .close{
+            position: absolute;
+            top: 5px;
+            right: 25px;
+            font-size: 35px;
+            cursor: pointer;
+            color: #606060;
+            text-shadow: 2px 1px 4px rgba(0,0,0,0.2);
+        }
+
+        input{
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            &[type="text"]{
+                width: 45%;
+                height: 35px;
+                margin: 0 1.5% 10px;
+                border: unset;
+                border-bottom: 1px solid #333333;
+                padding-left: 10px;
+
+                &:focus{
+                    outline: unset;
+                }
+            }
+            &:-webkit-autofill,
+            &:-internal-autofill-selected{
+                background-color: #f2f2f2 !important;
+                border: unset;
+                border-bottom: 1px solid #333333;
+                &:hover,
+                &:focus{
+                    border-bottom: 1px solid #333333;
+                    background-color: #f2f2f2 !important;
+                    border: unset;
+                }
+            }
+
+        }
+
+        button,
+        input[type='submit']{
+            display: block;
+            margin: 30px auto 0;
+            border: unset;
+            background-color: #0075ce;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 13px 20px;
+            text-transform: uppercase;
+            &:focus{
+                outline: unset;
+            }
+        }
+    }
+}
+
+.poster-preview{
+    width: 150px;
+    height: 200px;
+}

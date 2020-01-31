@@ -1,6 +1,7 @@
 const collection = require('./collection');
 
 var getAll = (req, res) => {
+    // Phase 2 -- automatically sort alphabetically
     let { query } = req;
     if(query.type == 'movie' || query.type == 'movies'){
         res
@@ -26,6 +27,12 @@ var getAll = (req, res) => {
         .send(
             collection.filter( (val) => val.type == 'cd')
         );
+    }else if(query.type == 'checkedOut'){
+        res
+        .status(200)
+        .send(
+            collection.filter( (val) => val.checkedOut === true)
+        );
     }
     else{
         res
@@ -47,7 +54,9 @@ var createSingle = (req, res) => {
     let { body } = req;
     var id = collection[collection.length - 1]["id"] ;
     id++;
-    console.log(id);
+
+    // duplicate body, check each key/value pair, if value is empty, leave it from object, push new/cloned body as object to collection array 
+    
     let newMedia = {
         id,
         ...body
@@ -61,19 +70,40 @@ var createSingle = (req, res) => {
 }
 
 var updateChecked = (req, res) => {
-    let { params } = req;
-
+    let { params, body } = req;
+    
     let targetMedia = collection.findIndex( media => media.id == params.id);
 
-    // if input field is empty, find current value and pass in body
-
     collection[targetMedia]["checkedOut"] = !collection[targetMedia]["checkedOut"]
-
+    if(body){
+        collection[targetMedia]["checkedTo"]["person"] = body["checkedTo"]["person"];
+        collection[targetMedia]["checkedTo"]["dateCheckedOut"] = body["checkedTo"]["dateCheckedOut"];
+    }
     res
     .status(200)
     .send(collection);
 
 
+}
+
+var updateMedia = (req, res) => {
+
+    let { body } = req;
+    var id = body.id;
+
+    // phase 2 - duplicate body, check each key/value pair, if value is empty, leave it from object, push new/cloned body as object to collection array 
+    
+    let newMedia = {
+        id,
+        ...body
+    }
+    
+    collection.splice(id, 1 ,newMedia);
+
+
+    res
+    .status(200)
+    .send(collection);
 }
 
 var deleteSingle = (req, res) => {
@@ -93,5 +123,6 @@ module.exports = {
     getSingle,
     createSingle,
     updateChecked,
+    updateMedia,
     deleteSingle
 }
