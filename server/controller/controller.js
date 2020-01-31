@@ -1,7 +1,6 @@
 const collection = require('./collection');
 
 var getAll = (req, res) => {
-    // Phase 2 -- automatically sort alphabetically
     let { query } = req;
     if(query.type == 'movie' || query.type == 'movies'){
         res
@@ -34,11 +33,17 @@ var getAll = (req, res) => {
             collection.filter( (val) => val.checkedOut === true)
         );
     }
+    else if(query.search){
+        res
+        .status(200)
+        .send( collection.filter( val => val.title.includes(query.search) ) );
+    }
     else{
         res
         .status(200)
         .send(collection);
     }
+
 }
 
 var getSingle = (req, res) => {
@@ -90,8 +95,6 @@ var updateMedia = (req, res) => {
 
     let { body } = req;
     var id = body.id;
-
-    // phase 2 - duplicate body, check each key/value pair, if value is empty, leave it from object, push new/cloned body as object to collection array 
     
     let newMedia = {
         id,

@@ -3,9 +3,14 @@ import axios from 'axios';
 
 
 export default class Header extends Component{
+    constructor(){
+        super();
+        this.state = {
+            searchQuery: ''
+        }
+    }
     filterCollections = (e) => {
         let targetType = e.target.id;
-        console.log(e.target.id);
         axios
         .get(`/api/collections?type=${targetType}`)
         .then( res => {
@@ -26,6 +31,18 @@ export default class Header extends Component{
     addNewMedia = () => {
         this.props.showAddNew(true);
     }
+    handleSearch = (e) => {
+        this.setState({ searchQuery: e.target.value });
+    }
+    sendSearch =  () => {
+        axios
+        .get(`/api/collections?search=${this.state.searchQuery}`)
+        .then( res => {
+                this.props.updateCollections(res.data);
+            } 
+        )
+        .catch( err => console.log(err) );
+    }
     render(){
         return(
             <header className="flex justify-between align-center">
@@ -34,9 +51,6 @@ export default class Header extends Component{
                 </div>
                 <div>
                     <nav> 
-                            {/* Phase 2 - dynamically get catgories from objects */ 
-                             /** Phase 2 - show in nav all by checked out **/
-                            }
                         <ul className="flex justify-evenly align-center">
                             <li 
                                 id="movies" 
@@ -61,6 +75,7 @@ export default class Header extends Component{
                             <li
                                 onClick={this.addNewMedia}
                             >Add New</li>
+                            <li className='search'><input onChange={this.handleSearch} type="text" /><button onClick={this.sendSearch}>Search</button></li>
                         </ul>
                     </nav>
                 </div>
