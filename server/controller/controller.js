@@ -1,5 +1,21 @@
 const collection = require('./collection');
 
+var collectionSorted = (arr) => {
+    let sorted = arr.sort(function(a, b) {
+        var nameA = a.title.toUpperCase(); 
+        var nameB = b.title.toUpperCase();
+        if (nameA < nameB) {
+            return -1;
+        }
+        if (nameA > nameB) {
+            return 1;
+        }
+        return 0;
+    })
+
+    return sorted;
+}
+
 var getAll = (req, res) => {
     let { query } = req;
     if(query.type == 'movie' || query.type == 'movies'){
@@ -41,7 +57,7 @@ var getAll = (req, res) => {
     else{
         res
         .status(200)
-        .send(collection);
+        .send(collectionSorted(collection));
     }
 
 }
