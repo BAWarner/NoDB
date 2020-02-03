@@ -16,6 +16,9 @@
         img{
             @extend .poster-preview;
             display: inline-block;
+            &.block{
+                display: block;
+            }
         }
     }
 
@@ -23,7 +26,9 @@
         width: 30%;
 
         img,
-        .buttons-row{
+        .buttons-row,
+        .details,
+        .essentials{
             width: 250px;
         }
     }
@@ -43,7 +48,7 @@
         display: block;
         width: 20px;
         height: 20px;
-        border: 2px solid #000000;
+        border: 2px solid #e5e5e5;
         border-radius: 100%;
         line-height: initial;
 
@@ -58,7 +63,9 @@
         }
     }
 
-    .buttons-row{
+    .buttons-row,
+    .details,
+    .essentials{
         -webkit-user-select: none; /* Chrome/Safari */        
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* IE10+ */

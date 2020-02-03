@@ -40,11 +40,11 @@ function Details(props){
                                 ? <span className="single-info block">Checked out to: {checkedTo.person} on         {checkedTo.dateCheckedOut}</span>
                                 : null
                         }
-                      </>
+                    </>
                     : null
             }
         </div>
-      )
+    )
 }
 
 

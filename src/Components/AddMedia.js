@@ -46,6 +46,27 @@ class AddMedia extends Component{
                 <form>
                     <h1 className="text-center">Add {this.state.title} to your {this.state.type} collection</h1>
                     <span className="close" onClick={this.toggleNewMedia}>&times;</span>
+                    <div className="poster-wrap">
+                        <input 
+                            onChange={this.updateInputValue} 
+                            name="poster" 
+                            placeholder="URL to Poster" 
+                            type="text"
+                            className="mrg-0-auto block" 
+                        />
+                        {
+                            this.state.poster !== ''
+                                ? <img className='poster-preview block' 
+                                        src={this.state.poster}
+                                        alt="preview"
+                                    />
+                                : <img 
+                                    src='https://dummyimage.com/150x200/dddddd/ffffff.png&text=Poster+Placeholder'
+                                    alt="preview placeholder"
+                                    className='poster-preview block'
+                                    />
+                        }
+                    </div>
                     <input 
                         onChange={this.updateInputValue} 
                         name="title" 
@@ -58,20 +79,6 @@ class AddMedia extends Component{
                         placeholder="Media Type" 
                         type="text" 
                     />
-                    <input 
-                        onChange={this.updateInputValue} 
-                        name="poster" 
-                        placeholder="URL to Poster" 
-                        type="text" 
-                    />
-                    {
-                        this.state.poster !== ''
-                            ? <img className='poster-preview' 
-                                    src={this.state.poster}
-                                    alt="preview"
-                                />
-                            : <img src='https://dummyimage.com/150x200/dddddd/ffffff.png&text=Poster+Placeholder' alt="preview placeholder" />
-                    }
                     <input 
                         onChange={this.updateInputValue} 
                         name="releaseYear" 
@@ -126,7 +133,7 @@ class AddMedia extends Component{
                     <input 
                         onChange={this.updateInputValue} 
                         name="runtime" 
-                        placeholder="Runtime" 
+                        placeholder="Runtime (In minutes)" 
                         type="text" 
                     />
                     <input 

@@ -161,7 +161,7 @@ class Media extends Component{
     render(){
         let { title, type, poster, releaseYear, checkedOut, artist, author } = this.props.collection;
         return(
-            <div className="single text-center">
+            <div className="single">
                 <div className="buttons-row flex justify-between align-center">
                     {
                         this.state.showCheckedOut === true
@@ -212,6 +212,28 @@ class Media extends Component{
                             <form>
                                 <h1 className="text-center">Editing {title}</h1>
                                 <span className="close" onClick={this.toggleEdit}>&times;</span>
+                                <div className="poster-wrap">
+                                    <input
+                                        className="mrg-0-auto block" 
+                                        onChange={this.updateInputValue} 
+                                        name="poster" 
+                                        placeholder="URL to Poster" 
+                                        type="text" 
+                                        value={this.state.poster}
+                                    />
+                                    {
+                                        this.state.poster !== ''
+                                            ? <img className='poster-preview block' 
+                                                    src={this.state.poster}
+                                                    alt="preview"
+                                                />
+                                            : <img 
+                                                src='https://dummyimage.com/150x200/dddddd/ffffff.png&text=Poster+Placeholder'
+                                                alt="preview placeholder"
+                                                className='poster-preview block'
+                                                />
+                                    }
+                                </div>
                                 <input 
                                     onChange={this.updateInputValue} 
                                     name="title" 
@@ -225,17 +247,6 @@ class Media extends Component{
                                     placeholder="Media Type" 
                                     type="text" 
                                     value={this.state.type}
-                                />
-                                <input 
-                                    onChange={this.updateInputValue} 
-                                    name="poster" 
-                                    placeholder="URL to Poster" 
-                                    type="text" 
-                                    value={this.state.poster}
-                                />
-                                <img className='poster-preview' 
-                                    src={this.state.poster}
-                                    alt="preview"
                                 />
                                 <input 
                                     onChange={this.updateInputValue} 
@@ -267,7 +278,7 @@ class Media extends Component{
                                 <input 
                                     onChange={this.updateInputValue} 
                                     name="runtime" 
-                                    placeholder="Runtime" 
+                                    placeholder="Runtime (In minutes)" 
                                     type="text"
                                     value={this.state.runtime}
                                 />
@@ -307,11 +318,11 @@ class Media extends Component{
                         poster
                             ? poster
                             : 'https://dummyimage.com/250x375/dddddd/ffffff.png&text=Poster+Placeholder'
-                     } 
+                    } 
                     alt="poster"
                 />
                 <div className="essentials">
-                    <h2>{title}</h2>
+                    <h2 className="mrg-top-15">{title}</h2>
                     <span className="single-info block">{type.charAt(0).toUpperCase() + type.substring(1)}</span>
                     {
                         artist

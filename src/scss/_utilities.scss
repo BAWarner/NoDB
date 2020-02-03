@@ -2,10 +2,27 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    color: #e5e5e5;
+    background-color: #141414;
+}
+
+button{
+    background: rgba(51,51,51,0.4);
+    cursor: pointer;
+    color: #e5e5e5;
+    padding: 5px 20px;
+    border: unset;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .block{
     display: block;
+}
+
+.inline-block{
+    display: inline-block;
 }
 
 .text-center{
@@ -14,6 +31,13 @@ body{
 
 .mrg-btm-65{
     margin-bottom: 65px;
+}
+.mrg-0-auto{
+    margin: 0 auto;
+}
+
+.pad-right-25{
+    padding-right: 25px;
 }
 
 .flex{

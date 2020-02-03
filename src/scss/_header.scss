@@ -1,7 +1,14 @@
 header{
 
     padding: 25px;
-    border-bottom: 1px solid #000000;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0.99+33,0.66+66,0.33+99,0+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.99) 33%, rgba(0,0,0,0.66) 66%, rgba(0,0,0,0.33) 99%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.99) 33%,rgba(0,0,0,0.66) 66%,rgba(0,0,0,0.33) 99%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.99) 33%,rgba(0,0,0,0.66) 66%,rgba(0,0,0,0.33) 99%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+
+
 
     .logo{
         cursor: pointer;
@@ -15,6 +22,7 @@ header{
             li{
                 list-style-type: none;
                 padding: 10px 0;
+                color: #fefefe;
                 &:not(:last-child){
                     padding: 10px 15px;
                 }
