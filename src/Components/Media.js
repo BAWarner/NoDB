@@ -37,7 +37,7 @@ class Media extends Component{
     }
     componentDidMount() {
         let { 
-                type, title, poster, releaseYear, genre, checkedOut, chekcedTo, artist,
+                type, title, poster, releaseYear, genre, checkedOut, checkedTo, artist,
                 director, runtime, seasons,network, author
             } = this.props.collection;
 
@@ -49,7 +49,7 @@ class Media extends Component{
                     releaseYear,
                     genre,
                     checkedOut,
-                    chekcedTo,
+                    checkedTo,
                     artist,
                     director,
                     runtime,
@@ -73,9 +73,12 @@ class Media extends Component{
     updateMedia(){
         let id = this.props.collection.id;
         let { 
-                type, title, poster, releaseYear, genre, checkedOut, artist,
+                type, title, poster, releaseYear, genre, checkedOut, checkedTo, artist,
                 director, runtime, seasons,network, author
             } = this.state;
+        
+        console.log(checkedTo);
+
         let body = {
             id: id,
             type: type,
@@ -84,6 +87,7 @@ class Media extends Component{
             releaseYear: releaseYear,
             genre: genre,
             checkedOut: checkedOut,
+            checkedTo: checkedTo,
             artist: artist,
             director: director,
             runtime: runtime,
