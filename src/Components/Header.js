@@ -6,8 +6,13 @@ export default class Header extends Component{
     constructor(){
         super();
         this.state = {
-            searchQuery: ''
+            searchQuery: '',
+            showAll: true
         }
+    }
+    componentDidMount(){
+        let showAll = this.props.showAllVal;
+        this.setState({showAll})
     }
     filterCollections = (e) => {
         let targetType = e.target.id;
@@ -34,6 +39,10 @@ export default class Header extends Component{
     handleSearch = (e) => {
         this.setState({ searchQuery: e.target.value });
     }
+    showAll = () => {
+        this.setState({showAll: !this.state.showAll});
+        this.props.showAll();
+    }
     sendSearch =  () => {
         axios
         .get(`/api/collections?search=${this.state.searchQuery}`)
@@ -47,7 +56,8 @@ export default class Header extends Component{
         return(
             <header className="flex justify-between align-center">
                 <div>
-                    <img onClick={this.resetQuery} className="logo" src='' alt='Logo'/>
+                    <img onClick={this.resetQuery} className="logo" src='https://4cd6f516swoxc9lfa735xv12-wpengine.netdna-ssl.com/wp-content/themes/Pixability/src/img/home/icon-youtube.png' alt='Logo'/>
+                    <span onClick={this.showAll} className="show-all ">Show {this.state.showAll === true ? 'Carousel' : 'All'}</span>
                 </div>
                 <div>
                     <nav> 

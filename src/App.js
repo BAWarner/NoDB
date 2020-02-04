@@ -3,6 +3,7 @@ import './App.scss';
 import Header from './Components/Header';
 import AddMedia from './Components/AddMedia';
 import Collection from './Components/Collection';
+import Carousel from './Components/Carousel';
 import axios from 'axios';
 import Footer from './Components/Footer';
 
@@ -12,9 +13,11 @@ class App extends React.Component{
       this.state = {
         collection: [],
         showAddNew: false,
+        showAll: true
       }
       this.updateCollections = this.updateCollections.bind(this);
       this.toggleNewMedia = this.toggleNewMedia.bind(this);
+      this.toggleShowAll = this.toggleShowAll.bind(this);
     }
     componentDidMount(){
       axios
@@ -28,6 +31,9 @@ class App extends React.Component{
     }
     toggleNewMedia(showForm){
       this.setState({showAddNew: showForm});
+    }
+    toggleShowAll(){
+      this.setState({ showAll: !this.state.showAll });
     }
     render(){
       return (
@@ -44,11 +50,21 @@ class App extends React.Component{
           <Header
             updateCollections={this.updateCollections}
             showAddNew={this.toggleNewMedia}
+            showAll={this.toggleShowAll}
+            showAllVal={this.state.showAll}
           />
-          <Collection 
-            collection={this.state.collection}
-            updateCollections={this.updateCollections}
-          />
+          {
+            this.state.showAll === true
+              ?
+                <Collection 
+                  collection={this.state.collection}
+                  updateCollections={this.updateCollections}
+                />
+
+              : <Carousel />
+          }
+
+
           <Footer />
         </div>
     );
